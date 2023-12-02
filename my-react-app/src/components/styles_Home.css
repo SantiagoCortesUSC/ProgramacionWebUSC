@@ -1,0 +1,130 @@
+body{
+    font-family: Arial, sans-serif;
+    display: block;
+    background-color: #e6f4f5;
+}
+
+
+
+.encabezado{
+    position: fixed;
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    width: 100%;
+    max-height: 50px;
+    height: 100%;
+    background: rgb(59, 59, 253);
+    top: 0;
+    left: 0;
+    
+}
+
+.encabezado.scrolled {
+    background-color: rgb(59, 59, 253); /* Puedes ajustar el color cuando el encabezado está desplazado */
+    box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.521); /* Sombra si deseas un efecto de elevación */
+}
+
+.navegacion{
+    padding-left: 20px;
+}
+
+.login{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    padding: 5px;
+    top: 10px;
+    right: 70px;
+    background: #e6f4f5;
+    border-radius: 25px;
+}
+
+.comunidad{
+    background: #6b7575;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.libros_destacados{
+    background: #23f4ff;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.grid_columnas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 10px; /* Espacio entre los recuadros pequeños */
+}
+
+.grid_filas{
+    display: flex;
+    background: #6b7575;
+    border-radius: 25px;
+    width: 251.66px;
+    height: 362px;
+    margin: 0px;
+    justify-content: c;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid_filas h3{
+    display: flex;
+    justify-content: center;
+}
+
+.icono{
+    max-width: 40px;
+    width: 100%;
+    max-height: 40px;
+    height: 100%;
+    border: #e6f4f5;
+    border-radius: 50%;
+}
+
+.usuario{
+    display: none;
+    position: absolute;
+    align-items: center;
+    padding: 5px;
+    top: 10px;
+    right: 70px;
+    background: #e6f4f5;
+    border-radius: 25px;
+}
+
+
+.encabezado a{
+    padding-right: 50px;
+    color: #ffffff;
+    font-size: x-large
+}
+
+h3{
+    margin: 0px;
+}
+
+img{
+    padding: 10px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+main{
+    display: grid;
+    margin-top: 90px;
+
+    grid-template-columns: 70% 30%;
+}
+
+footer{
+    display: block;
+}
+
+section {
+    padding-left: 10px;
+    padding-right: 10px; 
+}
