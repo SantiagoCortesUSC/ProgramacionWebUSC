@@ -1,6 +1,8 @@
 // Login.js
 import React, { useState } from 'react';
 import { login, register } from '../services/api'; // Ajusta la ruta según tu estructura de archivos
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+
 import './styles_Login.css'; // Asegúrate de importar tu hoja de estilos
 
 
@@ -17,6 +19,11 @@ function Login() {
             if (response.success) {
                 // Inicio de sesión exitoso, realizar acciones necesarias
                 console.log('Inicio de sesión exitoso');
+                if (response.redirectTo) {
+                    window.location.href = response.redirectTo;
+                } else {
+                    // Puedes realizar otras acciones necesarias después de un inicio de sesión exitoso
+                }
             } else {
                 // Manejar errores, por ejemplo, mostrar un mensaje de error
                 console.error('Error en inicio de sesión:', response.message);
@@ -37,7 +44,9 @@ function Login() {
             </head>
 
             <body>
-                <img src="icono_pagina.png" alt="Logo" className="logo" />
+            <Link to="/">
+                    <img src="icono_pagina.png" alt="Logo" className="logo" />
+            </Link>
 
                 <div className="login-container">
                     <h2>Iniciar Sesión</h2>

@@ -31,10 +31,10 @@ function Home() {
                             <Link to="/login" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>Login</Link>
                         </div>
 
-                        <div className="usuario">
+                        {/* <div className="usuario">
                             <img src="icono_usuario.png" alt="icono_usuario" className="icono" />
                             <a href="/Login" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>nombre usuario</a>
-                        </div>
+                        </div> */}
                     </nav>
                 </header>
 

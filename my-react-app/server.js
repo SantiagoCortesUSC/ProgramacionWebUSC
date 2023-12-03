@@ -42,7 +42,6 @@ app.get('/', (req, res) => {
     
 });
 
-// Rutas para el login y registro
 app.post('/login', (req, res) => {
     console.log('Recibida solicitud de inicio de sesión:', req.body);
 
@@ -56,14 +55,15 @@ app.post('/login', (req, res) => {
             res.status(500).json({ error: 'Error interno del servidor' });
         } else {
             if (result.length > 0) {
-                res.status(200).json({ success: 'Inicio de sesión exitoso' });
-                res.redirect('/home');
+                // Enviar un objeto JSON con la información de redirección
+                res.status(200).json({ success: 'Inicio de sesión exitoso', redirectTo: '/' });
             } else {
                 res.status(401).json({ error: 'Credenciales incorrectas' });
             }
         }
     });
 });
+
 
 app.post('/register', (req, res) => {
     const { usuarios, correo, contraseña } = req.body;
