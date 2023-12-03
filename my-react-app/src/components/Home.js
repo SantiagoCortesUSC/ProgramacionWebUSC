@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 
 import './styles_Home.css'; // Asegúrate de importar tu hoja de estilos
-
+import icono_usuario from './icono_usuario.png'
+import portada from './portada.jpg'
 
 
 function Home() {
@@ -16,7 +17,7 @@ function Home() {
                 <link rel="stylesheet" href="Styles_Home.css" />
             </head>
 
-            <body>
+            <body className='body_home'>
                 <header className="encabezado">
                     <nav>
 
@@ -27,7 +28,7 @@ function Home() {
                         </div>
                         
                         <div className="login">
-                            <img src="icono_usuario.png" alt="icono_usuario" className="icono" />
+                            <img src={icono_usuario} alt="icono_usuario" className="icono" />
                             <Link to="/login" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>Login</Link>
                         </div>
 
@@ -40,18 +41,23 @@ function Home() {
 
                 <main>
                     <h1><li>Libros Destacados</li></h1>
-                    <h1 style={{ display: 'flex', justifyContent: 'center' }}>Comunidad</h1>
+                    <h1 className='cosas'>Comunidad</h1>
 
                     <section id="Libro_destacado">
                         <div className="libros_destacados">
                             <div className="grid_columnas">
+
                                 <div className="grid_filas">
                                     <a href="">
-                                        <img src="portada.jpg" alt="" />
+                                        <img src={portada} alt="" />
                                         <h3>libro 1</h3>
                                     </a>
                                 </div>
                                 <div className="grid_filas">
+                                    <img src={portada} alt="" />
+                                    <h3>libro 1</h3>
+                                </div>
+                                {/* <div className="grid_filas">
                                     <img src="portada.jpg" alt="" />
                                     <h3>libro 1</h3>
                                 </div>
@@ -62,11 +68,8 @@ function Home() {
                                 <div className="grid_filas">
                                     <img src="portada.jpg" alt="" />
                                     <h3>libro 1</h3>
-                                </div>
-                                <div className="grid_filas">
-                                    <img src="portada.jpg" alt="" />
-                                    <h3>libro 1</h3>
-                                </div>
+                                </div> */}
+
                             </div>
                         </div>
                     </section>

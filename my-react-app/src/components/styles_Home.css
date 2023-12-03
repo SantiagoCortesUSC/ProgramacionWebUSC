@@ -1,4 +1,4 @@
-body{
+.body_home{
     font-family: Arial, sans-serif;
     display: block;
     background-color: #e6f4f5;
@@ -127,4 +127,11 @@ footer{
 section {
     padding-left: 10px;
     padding-right: 10px; 
+}
+
+
+
+.cosas{
+    display: flex;  
+    justify-content: center;
 }

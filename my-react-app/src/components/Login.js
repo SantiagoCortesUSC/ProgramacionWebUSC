@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import { login, register } from '../services/api'; // Ajusta la ruta según tu estructura de archivos
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
-
 import './styles_Login.css'; // Asegúrate de importar tu hoja de estilos
-
+import img from './facebook.png'
+import img2 from './google.png'
+import logo from './icono_pagina.png'
 
 function Login() {
     const [usernameOrEmail, setUsernameOrEmail] = useState('');
@@ -34,6 +35,17 @@ function Login() {
         }
     };
 
+    const handleFacebookLogin = () => {
+        // Redirigir al usuario a la ruta de autenticación de Facebook
+        window.location.href = "http://localhost:5000/auth/facebook";
+    };
+
+    const handleGoogleLogin = () => {
+        // Redirigir al usuario a la ruta de autenticación de Google
+        window.location.href = "http://localhost:5000/auth/google";
+    };
+
+
     return (
         <div>
             <head>
@@ -43,9 +55,9 @@ function Login() {
                 <link rel="stylesheet" href="styles_login.css" />
             </head>
 
-            <body>
+            <body className='body_login'>
             <Link to="/">
-                    <img src="icono_pagina.png" alt="Logo" className="logo" />
+                    <img src={logo} alt="Logo" className="logo" />
             </Link>
 
                 <div className="login-container">
@@ -59,6 +71,18 @@ function Login() {
                         </div>
                         <button type="submit">Iniciar Sesión</button>
                     </form>
+                    <img
+                        src={img2}
+                        alt='Iniciar Sesión con Google'
+                        className='google-login-button'
+                        onClick={handleGoogleLogin}
+                    />
+                    <img
+                        src={img}
+                        alt='Iniciar Sesion con Facebook'
+                        className='facebook-login-button'
+                        onClick={console.log("Autentificacion con Facebook Exitosa")}
+                    />
                     <p>No tienes cuenta? <a href="/registro">Regístrate</a></p>
                 </div>
             </body>
