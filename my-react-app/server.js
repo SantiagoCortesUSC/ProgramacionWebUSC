@@ -57,6 +57,7 @@ app.post('/login', (req, res) => {
         } else {
             if (result.length > 0) {
                 res.status(200).json({ success: 'Inicio de sesión exitoso' });
+                res.redirect('/home');
             } else {
                 res.status(401).json({ error: 'Credenciales incorrectas' });
             }

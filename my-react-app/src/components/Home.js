@@ -1,6 +1,10 @@
 // Home.js Hola
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+
 import './styles_Home.css'; // Asegúrate de importar tu hoja de estilos
+
+
 
 function Home() {
     return (
@@ -17,19 +21,19 @@ function Home() {
                     <nav>
 
                         <div className="navegacion">
-                            <a href="">Club de lectura</a>
-                            <a href="">Libros</a>
-                            <a href="">Mis Libros</a>
+                        <Link to="/">Club de lectura</Link>
+                        <Link to="/libros">Libros</Link>
+                        <Link to="/mis-libros">Mis Libros</Link>
                         </div>
                         
                         <div className="login">
                             <img src="icono_usuario.png" alt="icono_usuario" className="icono" />
-                            <a href="" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>Login</a>
+                            <Link to="/login" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>Login</Link>
                         </div>
 
                         <div className="usuario">
                             <img src="icono_usuario.png" alt="icono_usuario" className="icono" />
-                            <a href="" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>nombre usuario</a>
+                            <a href="/Login" style={{ color: 'black', marginLeft: '20px', padding: '0 20px' }}>nombre usuario</a>
                         </div>
                     </nav>
                 </header>
