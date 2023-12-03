@@ -43,8 +43,13 @@
 
 .comunidad{
     background: #6b7575;
-    padding: 20px;
+    padding: 40px;
     border-radius: 25px;
+    border: 50px rgb(249, 185, 185)(0, 21, 255);
+}
+
+.comunidad li{
+    margin-bottom: 20px;
 }
 
 .libros_destacados{

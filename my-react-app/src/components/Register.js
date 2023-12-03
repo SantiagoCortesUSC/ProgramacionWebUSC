@@ -8,10 +8,33 @@ function Registro() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
-        // Lógica para manejar el registro de usuario
-        // Puedes utilizar fetch u otra biblioteca para realizar una solicitud al backend
+
+        const userData = {
+            username,
+            email,
+            password,
+        };
+
+        try {
+            const response = await fetch('/api/usuarios/1', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            });
+
+            if (response.ok) {
+                console.log('Usuario actualizado correctamente');
+                // Puedes redirigir al usuario o realizar otras acciones después de la actualización
+            } else {
+                console.error('Error al actualizar usuario');
+            }
+        } catch (error) {
+            console.error('Error de red:', error);
+        }
     };
 
     return (

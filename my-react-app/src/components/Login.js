@@ -83,7 +83,9 @@ function Login() {
                         className='facebook-login-button'
                         onClick={console.log("Autentificacion con Facebook Exitosa")}
                     />
-                    <p>No tienes cuenta? <a href="/registro">Regístrate</a></p>
+                    <span>No tienes cuenta? <Link to="/Register">Regístrate</Link></span>
+                    
+
                 </div>
             </body>
         </div>
