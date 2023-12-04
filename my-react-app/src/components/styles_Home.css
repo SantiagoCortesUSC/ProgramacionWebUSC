@@ -44,7 +44,7 @@
 .comunidad{
     background: #6b7575;
     padding: 40px;
-    border-radius: 25px;
+    border-radius: 0px;
     border: 50px rgb(249, 185, 185)(0, 21, 255);
 }
 
@@ -53,9 +53,9 @@
 }
 
 .libros_destacados{
-    background: #23f4ff;
+    background: rgb(93, 143, 244);
     padding: 30px;
-    border-radius: 25px;
+    border-radius: 0px;
 }
 
 .grid_columnas{

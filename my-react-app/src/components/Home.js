@@ -51,12 +51,12 @@ function Home() {
                                 <div className="grid_filas">
                                     <a href="">
                                         <img src={portada1} alt="" />
-                                        <h3>libro 1</h3>
+                                        <h3>Memento Mori</h3>
                                     </a>
                                 </div>
                                 <div className="grid_filas">
                                     <img src={portada2} alt="" />
-                                    <h3>libro 1</h3>
+                                    <h3>Ocultos</h3>
                                 </div>
                                 {/* <div className="grid_filas">
                                     <img src="portada.jpg" alt="" />
@@ -72,7 +72,7 @@ function Home() {
                                 </div> */}
 
                             </div>
-                            <h1>¡Mas Libros Proximamente!</h1>
+                            <h1 className=''>¡Mas Libros Proximamente!</h1>
                         </div>
                     </section>
 
